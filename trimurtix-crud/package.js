@@ -22,9 +22,9 @@ function configure(api){
 
   // Test API Use
   api.use([
+    'mongo',
     'aldeed:simple-schema@1.5.3',
-    'aldeed:collection2@2.9.0',
-    'trimurtix:crud@0.0.4'
+    'aldeed:collection2@2.9.0'
   ]);
 
   // Main Module
@@ -44,6 +44,7 @@ Package.onTest(function(api) {
 
   // Test API Use
   api.use([
+    'mongo',
     'aldeed:simple-schema@1.5.3',
     'aldeed:collection2@2.9.0',
     'trimurtix:crud@0.0.4'
