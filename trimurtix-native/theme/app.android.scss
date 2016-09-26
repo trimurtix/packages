@@ -1,0 +1,27 @@
+// http://blaze-native.io/
+
+
+// App Shared Variables
+// --------------------------------------------------
+// Shared Sass variables go in the utils/variables.scss file
+@import "utils/variables";
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+@import "platforms/icons/icons.android";
+@import "platforms/fonts/fonts.android";
+@import "platforms/android";
+
+// App Shared Sass
+// --------------------------------------------------
+// All Sass files that make up this app goes into the app.core.scss file.
+// For simpler CSS overrides, custom app CSS must come after's CSS.
+@import "app.core";
+
+
+// App Material Design Only Sass
+// --------------------------------------------------
+// CSS that should only apply to the Material Design app

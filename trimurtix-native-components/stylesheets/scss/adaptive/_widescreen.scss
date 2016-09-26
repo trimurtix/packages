@@ -1,0 +1,11 @@
+/*
+ * Adaptive
+ * @ Widescreen
+ *
+*/
+
+@include widescreen {
+  .content {
+    width:1140px;
+  }
+}

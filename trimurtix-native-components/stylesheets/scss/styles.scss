@@ -1,0 +1,79 @@
+/*
+*
+* @ Style Guide based in SMASCS and OOCSS - v0.0.1
+* @ SCSS
+*
+*/
+
+
+/*
+ *  Config
+*/
+
+@import "config/variables";
+@import "config/mixins";
+@import "config/utilities";
+@import "config/reset";
+
+
+/*
+ *  Base
+*/
+
+
+@import "base/view";
+@import "base/content";
+@import "base/colors";
+@import "base/text";
+@import "base/images";
+@import "base/forms";
+@import "base/media";
+@import "base/flexbox";
+
+/*
+ *  Layout
+*/
+
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/toolbar";
+@import "layout/navigation";
+
+/*
+ *  Modules
+*/
+
+@import "modules/avatar";
+@import "modules/article";
+@import "modules/button";
+@import "modules/breadcrumb";
+@import "modules/badge";
+@import "modules/card";
+@import "modules/chips";
+@import "modules/collapse";
+@import "modules/dialog";
+@import "modules/depths";
+@import "modules/list";
+@import "modules/loading";
+@import "modules/pagination";
+@import "modules/toast";
+@import "modules/table";
+
+/*
+ *  Resolutions
+*/
+
+@import "adaptive/widescreen";
+@import "adaptive/desktop";
+@import "adaptive/tablet";
+@import "adaptive/landscape";
+@import "adaptive/portrait";
+@import "adaptive/no-screen";
+
+
+/*
+ *  Platforms
+*/
+
+@import "platforms/ios";
+@import "platforms/android";

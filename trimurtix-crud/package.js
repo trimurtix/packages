@@ -1,7 +1,7 @@
 // Trimurtix CRUD
 Package.describe({
   name: 'trimurtix:crud',
-  version: '0.0.5',
+  version: '0.0.6',
   summary: 'Meteor Methods CRUD (Insert, Update and Remove)',
   git: 'https://github.com/trimurtix/packages/trimurtix-crud',
   documentation: 'README.md'
@@ -32,10 +32,23 @@ function configure(api){
 
   // Add API Files
   api.addFiles([
-    'server/trimurtix__msgFeedBack.js', 
-    'server/trimurtix__msgException.js', 
+    'server/trimurtix__msgFeedBack.js',
+    'server/trimurtix__msgException.js',
     'server/trimurtix__crud.js'
   ], 'server' );
+
+  api.export([
+    'Checkout',
+    'Help',
+    'Orders',
+    'Products',
+    'Departments',
+    'Recipes',
+    'Sections',
+    'Category',
+    'Shops',
+    'Users',
+  ]);
 
 }
 

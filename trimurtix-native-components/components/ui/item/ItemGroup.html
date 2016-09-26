@@ -1,0 +1,10 @@
+<template name="ItemGroup">
+  <div class="item-group">
+    {{#if dividerVisible }}
+      <div class="item-divider">
+        {{ dividerLabel }}
+      </div>
+    {{/if}}
+    {{> UI.contentBlock }}
+  </div>
+</template>

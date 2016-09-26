@@ -1,0 +1,151 @@
+/*
+ * Modules
+ * @ List
+ *
+*/
+
+.ListView {
+    @extend .no-style;
+    .ListView-header {
+      padding: 8px 16px;
+      font-size: 14px;
+      border-bottom:1px solid #dedede;
+      font-weight: 500;
+      color: #000;
+    }
+}
+
+// .item-group {
+//   > .item {
+//     &:first-child {
+//         background:#000;
+//         .item-content {
+//           border: 0;
+//         }
+//     }
+//   }
+// }
+
+// No Lines
+.no-lines {
+  .item {
+    .item-content {
+      border:0;
+    }
+  }
+}
+
+// Inset
+.inset {
+  margin:12px;
+}
+
+.item {
+
+    position: relative;
+    padding-right: 0;
+    padding-left: 16px;
+    text-transform: none;
+    background-color: #fff;
+    box-shadow: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    min-height: 2.6rem;
+    text-align: initial;
+    text-decoration: none;
+    color: inherit;
+
+    .item-content {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      overflow: hidden;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: inherit;
+      -ms-flex-direction: inherit;
+      flex-direction: inherit;
+      -webkit-box-align: inherit;
+      -webkit-align-items: inherit;
+      -ms-flex-align: inherit;
+      align-items: inherit;
+      -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+      align-self: stretch;
+      margin: 0;
+      border: 0;
+      padding-right: 8px;
+      border-top:1px solid #dedede;
+    }
+    .item-title {
+      display: block;
+      overflow: hidden;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin: 0;
+      font-size: inherit;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 400;
+      @include font-size(14px);
+      color: $dark-color;
+    }
+    .item-description {
+        color: #666;
+    }
+}
+
+.item-divider {
+  padding: 8px 16px;
+  font-size: 14px;
+  background: #f8f8f8;
+  font-weight: 500;
+  color: #000;
+
+}
+
+
+.item-badge {
+    .badge {
+        position: absolute;
+        right: 15px;
+    }
+    .item-content {
+        padding-right: 42px;
+    }
+}
+
+.item-avatar {
+    .item-content {
+        padding-left: 50px;
+        img {
+            position: absolute;
+            left: 12px;
+            top: 9px;
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            @include border-radius($base-circle-radius);
+        }
+    }
+}

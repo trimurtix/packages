@@ -1,0 +1,32 @@
+// http://blaze-native.io/
+
+
+// App Shared Variables
+// --------------------------------------------------
+// Shared Sass variables go in the utils/variables.scss file
+@import "utils/variables";
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+// iOS Sass
+// --------------------------------------------------
+// Custom App variables must be declared before importing.
+// will use its default values when a custom variable isn't provided.
+@import "platforms/icons/icons.web";
+@import "platforms/fonts/fonts.web";
+@import "platforms/web";
+
+
+// App Shared Sass
+// --------------------------------------------------
+// All Sass files that make up this app goes into the app.core.scss file.
+// For simpler CSS overrides, custom app CSS must come after's CSS.
+@import "app.core";
+
+
+// App iOS Only Sass
+// --------------------------------------------------
+// CSS that should only apply to the iOS app

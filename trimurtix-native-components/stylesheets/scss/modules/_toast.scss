@@ -1,0 +1,40 @@
+/*
+ * Modules
+ * @ Toast
+ *
+*/
+
+.toast {
+    position: relative;
+    padding: 12px;
+    background: color($amber, 500);
+    margin-bottom: 15px;
+    padding-right: 32px;
+    color: #fff;
+    @include border-radius($base-radius);
+    @extend .transition;
+    .close {
+        position: absolute;
+        right: -2px;
+        top: 3px;
+        color: color($dark, 200);
+    }
+}
+
+.toast-rounded {
+    @include border-radius($base-rounded-radius);
+    .close {
+        right: 0px;
+        top: 3px;
+    }
+}
+
+.toast-info {
+    background: color($blue, 500);
+    color: #fff
+}
+
+.toast-error {
+    background: color($red, 500);
+    color: #fff;
+}

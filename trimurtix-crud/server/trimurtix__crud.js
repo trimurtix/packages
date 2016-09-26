@@ -2,7 +2,7 @@
  *
  * @ trimurtix__crud - v0.0.4
  * Autor: Alisson Alexandre
- * 
+ *
  */
 
 Meteor.trimurtix__crud = {
@@ -44,10 +44,10 @@ Meteor.trimurtix__crud = {
             return [Meteor.call('getMsgFeedback', 'sucess', '000'), Meteor.collectionsObject[data[1]].insert(insert, { validate: true })];
         } catch (exceptionMessage) {
             var mongoException = Meteor.call('mongoException', exceptionMessage.stack);
-            if(mongoException[0] !== 'erro'){ 
+            if(mongoException[0] !== 'erro'){
             	Meteor.trimurtix__msgFeedback.data = [mongoException[2], mongoException[1]];
             	return [Meteor.call('getMsgFeedback', 'errorMongo', mongoException[0])];
-        	}else{ 
+        	}else{
         		return [Meteor.call('getMsgFeedback', 'errorSystem', '000')];
             }
         }
@@ -114,7 +114,7 @@ Meteor.trimurtix__crud = {
             if(mongoException[0] !== 'erro'){
             	Meteor.trimurtix__msgFeedback.data = [mongoException[2], mongoException[1]];
             	return [Meteor.call('getMsgFeedback', 'errorMongo', mongoException[0])];
-            }else{ 
+            }else{
             	return [Meteor.call('getMsgFeedback', 'errorSystem', '000')];
         	}
         }
@@ -124,8 +124,8 @@ Meteor.trimurtix__crud = {
 Meteor.methods({
     'crud': function(data) {
     	var crudAction = [
-    		'insert', 
-    		'update', 
+    		'insert',
+    		'update',
     		'remove'
     	]
 
@@ -134,7 +134,7 @@ Meteor.methods({
     	}
 
     	if(typeof Meteor.trimurtix__crud[crudAction[data[0]]] !== "undefined"){
-			return Meteor.trimurtix__crud[crudAction[data[0]]](data);
-		}
+				return Meteor.trimurtix__crud[crudAction[data[0]]](data);
+			}
     }
 });

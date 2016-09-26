@@ -1,0 +1,96 @@
+/*
+ * Modules
+ * @ Card
+ *
+*/
+
+.Card {
+    border: 1px solid $light-color;
+    background: #fff;
+    .Card-header,
+    .Card-footer {
+        position: relative;
+        padding: 0 10px;
+        background: $base-color;
+        height: 42px;
+        line-height: 42px;
+    }
+    .Card-icon-left {
+        .Card-title {
+            float: left;
+            position: relative;
+            left: 40px;
+        }
+    }
+    .Card-header {
+        border-bottom: 1px solid $light-color;
+        width: 100%;
+        margin: 0;
+        @include border-radius-separate($base-radius, $base-radius, 0, 0);
+        img {
+            @include border-radius-separate($base-radius, $base-radius, 0, 0);
+        }
+        .button {
+            height: 42px;
+            line-height: 42px;
+            float: left;
+            @include border-radius(0);
+            &:hover {
+                background: rgba(0, 0, 0, 0.05);
+            }
+        }
+        .Card-header-right,
+        .Card-header-left {
+            position: absolute;
+            top: 0;
+            height: 42px;
+            line-height: 42px;
+        }
+        .Card-header-right {
+            right: 0;
+            .button {
+                &:last-child {
+                    @include border-radius-separate(0, $base-radius, 0, 0);
+                }
+            }
+        }
+        .Card-header-left {
+            left: 0;
+            .button {
+                &:first-child {
+                    @include border-radius-separate($base-radius, 0, 0, 0);
+                }
+            }
+        }
+    }
+    .Card-footer {
+        border-top: 1px solid $light-color;
+        @include border-radius-separate(0, 0, $base-radius, $base-radius);
+    }
+    .Card-title {
+        font-weight: 500;
+        line-height: 42px;
+        @include font-size(20px);
+        img {
+            max-height:32px;
+            margin:5px;
+        }
+    }
+    .Card-content {
+        padding: 15px 10px;
+    }
+
+    > .ListView {
+      border:0;
+    }
+}
+
+// Placeholder
+.placeholder {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px dashed $light-color;
+    background: $base-color;
+    color: #666;
+    @include border-radius($base-radius);
+}
